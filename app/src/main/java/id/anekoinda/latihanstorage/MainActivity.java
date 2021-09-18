@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final CharSequence[] items = arrayList.toArray(new CharSequence[arrayList.size()]);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Pilih file yang diinginkan");
+        builder.setTitle("Pilih file Anda yang diinginkan");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
                 loadData(items[item].toString());
