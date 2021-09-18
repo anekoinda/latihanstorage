@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">MyReadWriteFile</string>
-    <string name="file_new">File New</string>
-    <string name="file_open">File Open</string>
-    <string name="file_save">File Save</string>
-    <string name="title">title</string>
+    <string name="app_name">Latihan Read and Write</string>
+    <string name="file_new">New</string>
+    <string name="file_open">Open</string>
+    <string name="file_save">Save</string>
+    <string name="title">What is the title of this file?</string>
+    <string name="hint_isi_pesan">Write the content here</string>
 </resources>
