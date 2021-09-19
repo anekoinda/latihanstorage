@@ -14,11 +14,11 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btnNew;
-    Button btnOpen;
-    Button btnSave;
-    EditText editContent;
-    EditText editTitle;
+    Button btnBaru;
+    Button btnBuka;
+    Button btnSimpan;
+    EditText edtKonten;
+    EditText edtJudul;
 
     File path;
 
@@ -27,15 +27,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnNew = (Button) findViewById(R.id.button_new);
-        btnOpen = (Button) findViewById(R.id.button_open);
-        btnSave = (Button) findViewById(R.id.button_save);
-        editContent = (EditText) findViewById(R.id.edit_file);
-        editTitle = (EditText) findViewById(R.id.edit_title);
+        btnBaru = (Button) findViewById(R.id.btnBaru);
+        btnBuka = (Button) findViewById(R.id.btnBuka);
+        btnSimpan = (Button) findViewById(R.id.btnSimpan);
+        edtKonten = (EditText) findViewById(R.id.edtKonten);
+        edtJudul = (EditText) findViewById(R.id.edtJudul);
 
-        btnNew.setOnClickListener(this);
-        btnOpen.setOnClickListener(this);
-        btnSave.setOnClickListener(this);
+        btnBaru.setOnClickListener(this);
+        btnBuka.setOnClickListener(this);
+        btnSimpan.setOnClickListener(this);
         path = getFilesDir();
     }
 
@@ -43,29 +43,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         int id = view.getId();
         switch (id) {
-            case R.id.button_new:
+            case R.id.btnBaru:
                 newFile();
                 break;
-            case R.id.button_open:
+            case R.id.btnBuka:
                 openFile();
                 break;
-            case R.id.button_save:
+            case R.id.btnSimpan:
                 saveFile();
                 break;
         }
     }
 
     public void newFile() {
-        editTitle.setText("");
-        editContent.setText("");
+        edtJudul.setText("");
+        edtKonten.setText("");
 
         Toast.makeText(this, "Clearing file", Toast.LENGTH_SHORT).show();
     }
 
     private void loadData(String title) {
         String text = FileHelper.readFromFile(this, title);
-        editTitle.setText(title);
-        editContent.setText(text);
+        edtJudul.setText(title);
+        edtKonten.setText(text);
         Toast.makeText(this, "Loading " + title + " data", Toast.LENGTH_SHORT).show();
     }
 
@@ -93,13 +93,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void saveFile() {
-        if (editTitle.getText().toString().isEmpty()) {
+        if (edtJudul.getText().toString().isEmpty()) {
             Toast.makeText(this, "Title harus diisi terlebih dahulu", Toast.LENGTH_SHORT).show();
         } else {
-            String title = editTitle.getText().toString();
-            String text = editContent.getText().toString();
+            String title = edtJudul.getText().toString();
+            String text = edtKonten.getText().toString();
             FileHelper.writeToFile(title, text, this);
-            Toast.makeText(this, "Saving " + editTitle.getText().toString() + " file", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Saving " + edtJudul.getText().toString() + " file", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Latihan Read and Write</string>
-    <string name="file_new">New</string>
-    <string name="file_open">Open</string>
-    <string name="file_save">Save</string>
-    <string name="title">What is the title of this file?</string>
-    <string name="hint_isi_pesan">Write the content here</string>
+    <string name="file_new">Baru</string>
+    <string name="file_open">Buka</string>
+    <string name="file_save">Simpan</string>
+    <string name="title">Beri nama file ini</string>
+    <string name="hint_isi_pesan">Tulis isi file disini</string>
 </resources>

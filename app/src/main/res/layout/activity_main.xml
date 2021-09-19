@@ -19,7 +19,7 @@
         android:gravity="center">
 
         <EditText
-            android:id="@+id/edit_title"
+            android:id="@+id/edtJudul"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -36,7 +36,7 @@
         android:layout_height="550dp">
 
         <EditText
-            android:id="@+id/edit_file"
+            android:id="@+id/edtKonten"
             style="@style/Widget.AppCompat.EditText"
             android:background="@drawable/custom_input"
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_new"
+                android:id="@+id/btnBaru"
                 android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:drawableLeft="@drawable/ic_new"
@@ -87,7 +87,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_open"
+                android:id="@+id/btnBuka"
                 android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -106,7 +106,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_save"
+                android:id="@+id/btnSimpan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/ic_save"
